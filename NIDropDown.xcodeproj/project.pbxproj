@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1945B517168D55D100C11EB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1945B516168D55D100C11EB2 /* UIKit.framework */; };
+		1945B519168D55D100C11EB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1945B518168D55D100C11EB2 /* Foundation.framework */; };
+		1945B51B168D55D100C11EB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1945B51A168D55D100C11EB2 /* CoreGraphics.framework */; };
+		1945B521168D55D100C11EB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1945B51F168D55D100C11EB2 /* InfoPlist.strings */; };
+		1945B523168D55D100C11EB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1945B522168D55D100C11EB2 /* main.m */; };
+		1945B527168D55D100C11EB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1945B526168D55D100C11EB2 /* AppDelegate.m */; };
+		1945B530168D563E00C11EB2 /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 1945B52F168D563E00C11EB2 /* NIDropDown.m */; };
+		1945B538168D592A00C11EB2 /* NIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1945B536168D592A00C11EB2 /* NIViewController.m */; };
+		1945B539168D592A00C11EB2 /* NIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1945B537168D592A00C11EB2 /* NIViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1945B512168D55D100C11EB2 /* NIDropDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIDropDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1945B516168D55D100C11EB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1945B518168D55D100C11EB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1945B51A168D55D100C11EB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1945B51E168D55D100C11EB2 /* NIDropDown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NIDropDown-Info.plist"; sourceTree = "<group>"; };
+		1945B520168D55D100C11EB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1945B522168D55D100C11EB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1945B524168D55D100C11EB2 /* NIDropDown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NIDropDown-Prefix.pch"; sourceTree = "<group>"; };
+		1945B525168D55D100C11EB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1945B526168D55D100C11EB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1945B52E168D563E00C11EB2 /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
+		1945B52F168D563E00C11EB2 /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
+		1945B535168D592A00C11EB2 /* NIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIViewController.h; sourceTree = "<group>"; };
+		1945B536168D592A00C11EB2 /* NIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIViewController.m; sourceTree = "<group>"; };
+		1945B537168D592A00C11EB2 /* NIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NIViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1945B50F168D55D100C11EB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1945B517168D55D100C11EB2 /* UIKit.framework in Frameworks */,
+				1945B519168D55D100C11EB2 /* Foundation.framework in Frameworks */,
+				1945B51B168D55D100C11EB2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1945B507168D55D000C11EB2 = {
+			isa = PBXGroup;
+			children = (
+				1945B52D168D55ED00C11EB2 /* Classes */,
+				1945B51C168D55D100C11EB2 /* NIDropDown */,
+				1945B515168D55D100C11EB2 /* Frameworks */,
+				1945B513168D55D100C11EB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1945B513168D55D100C11EB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1945B512168D55D100C11EB2 /* NIDropDown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1945B515168D55D100C11EB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1945B516168D55D100C11EB2 /* UIKit.framework */,
+				1945B518168D55D100C11EB2 /* Foundation.framework */,
+				1945B51A168D55D100C11EB2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1945B51C168D55D100C11EB2 /* NIDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				1945B525168D55D100C11EB2 /* AppDelegate.h */,
+				1945B526168D55D100C11EB2 /* AppDelegate.m */,
+				1945B535168D592A00C11EB2 /* NIViewController.h */,
+				1945B536168D592A00C11EB2 /* NIViewController.m */,
+				1945B537168D592A00C11EB2 /* NIViewController.xib */,
+				1945B51D168D55D100C11EB2 /* Supporting Files */,
+			);
+			path = NIDropDown;
+			sourceTree = "<group>";
+		};
+		1945B51D168D55D100C11EB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1945B51E168D55D100C11EB2 /* NIDropDown-Info.plist */,
+				1945B51F168D55D100C11EB2 /* InfoPlist.strings */,
+				1945B522168D55D100C11EB2 /* main.m */,
+				1945B524168D55D100C11EB2 /* NIDropDown-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1945B52D168D55ED00C11EB2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1945B52E168D563E00C11EB2 /* NIDropDown.h */,
+				1945B52F168D563E00C11EB2 /* NIDropDown.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1945B511168D55D100C11EB2 /* NIDropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1945B52A168D55D100C11EB2 /* Build configuration list for PBXNativeTarget "NIDropDown" */;
+			buildPhases = (
+				1945B50E168D55D100C11EB2 /* Sources */,
+				1945B50F168D55D100C11EB2 /* Frameworks */,
+				1945B510168D55D100C11EB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NIDropDown;
+			productName = NIDropDown;
+			productReference = 1945B512168D55D100C11EB2 /* NIDropDown.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1945B509168D55D000C11EB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1945B50C168D55D000C11EB2 /* Build configuration list for PBXProject "NIDropDown" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1945B507168D55D000C11EB2;
+			productRefGroup = 1945B513168D55D100C11EB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1945B511168D55D100C11EB2 /* NIDropDown */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1945B510168D55D100C11EB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1945B521168D55D100C11EB2 /* InfoPlist.strings in Resources */,
+				1945B539168D592A00C11EB2 /* NIViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1945B50E168D55D100C11EB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1945B523168D55D100C11EB2 /* main.m in Sources */,
+				1945B527168D55D100C11EB2 /* AppDelegate.m in Sources */,
+				1945B530168D563E00C11EB2 /* NIDropDown.m in Sources */,
+				1945B538168D592A00C11EB2 /* NIViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1945B51F168D55D100C11EB2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1945B520168D55D100C11EB2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1945B528168D55D100C11EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1945B529168D55D100C11EB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1945B52B168D55D100C11EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NIDropDown/NIDropDown-Prefix.pch";
+				INFOPLIST_FILE = "NIDropDown/NIDropDown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1945B52C168D55D100C11EB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NIDropDown/NIDropDown-Prefix.pch";
+				INFOPLIST_FILE = "NIDropDown/NIDropDown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1945B50C168D55D000C11EB2 /* Build configuration list for PBXProject "NIDropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1945B528168D55D100C11EB2 /* Debug */,
+				1945B529168D55D100C11EB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1945B52A168D55D100C11EB2 /* Build configuration list for PBXNativeTarget "NIDropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1945B52B168D55D100C11EB2 /* Debug */,
+				1945B52C168D55D100C11EB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1945B509168D55D000C11EB2 /* Project object */;
+}
