@@ -109,4 +109,10 @@
     [self.delegate niDropDownDelegateMethod:self];   
 }
 
+-(void)dealloc {
+    [super dealloc];
+    [table release];
+    [self release];
+}
+
 @end
