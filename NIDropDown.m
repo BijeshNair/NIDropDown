@@ -20,19 +20,27 @@
 @synthesize btnSender;
 @synthesize list;
 @synthesize delegate;
+@synthesize animationDirection;
 
-- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr {
+- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSString *)direction {
     btnSender = b;
+    animationDirection = direction;
     self = [super init];
     if (self) {
         // Initialization code
         CGRect btn = b.frame;
-        
-        self.frame = CGRectMake(btn.origin.x, btn.origin.y+btn.size.height, btn.size.width, 0);
         self.list = [NSArray arrayWithArray:arr];
+        
+        if ([direction isEqualToString:@"up"]) {
+            self.frame = CGRectMake(btn.origin.x, btn.origin.y, btn.size.width, 0);
+            self.layer.shadowOffset = CGSizeMake(-5, -5);
+        }else if ([direction isEqualToString:@"down"]) {
+            self.frame = CGRectMake(btn.origin.x, btn.origin.y+btn.size.height, btn.size.width, 0);
+            self.layer.shadowOffset = CGSizeMake(-5, 5);
+        }
+        
         self.layer.masksToBounds = NO;
         self.layer.cornerRadius = 8;
-        self.layer.shadowOffset = CGSizeMake(-5, 5);
         self.layer.shadowRadius = 5;
         self.layer.shadowOpacity = 0.5;
         
@@ -46,7 +54,11 @@
         
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.5];
-        self.frame = CGRectMake(btn.origin.x, btn.origin.y+btn.size.height, btn.size.width, *height);
+        if ([direction isEqualToString:@"up"]) {
+            self.frame = CGRectMake(btn.origin.x, btn.origin.y-*height, btn.size.width, *height);
+        } else if([direction isEqualToString:@"down"]) {
+            self.frame = CGRectMake(btn.origin.x, btn.origin.y+btn.size.height, btn.size.width, *height);
+        }
         table.frame = CGRectMake(0, 0, btn.size.width, *height);
         [UIView commitAnimations];
         
@@ -61,7 +73,11 @@
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5];
-    self.frame = CGRectMake(btn.origin.x, btn.origin.y+btn.size.height, btn.size.width, 0);
+    if ([animationDirection isEqualToString:@"up"]) {
+        self.frame = CGRectMake(btn.origin.x, btn.origin.y, btn.size.width, 0);
+    }else if ([animationDirection isEqualToString:@"down"]) {
+        self.frame = CGRectMake(btn.origin.x, btn.origin.y+btn.size.height, btn.size.width, 0);
+    }
     table.frame = CGRectMake(0, 0, btn.size.width, 0);
     [UIView commitAnimations];
 }

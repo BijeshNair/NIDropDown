@@ -56,7 +56,7 @@
     arr = [NSArray arrayWithObjects:@"Hello 0", @"Hello 1", @"Hello 2", @"Hello 3", @"Hello 4", @"Hello 5", @"Hello 6", @"Hello 7", @"Hello 8", @"Hello 9",nil];
     if(dropDown == nil) {
         CGFloat f = 200;
-        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr];
+        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :@"up"];
         dropDown.delegate = self;
     }
     else {

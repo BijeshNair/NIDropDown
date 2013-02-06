@@ -14,9 +14,11 @@
 @end 
 
 @interface NIDropDown : UIView <UITableViewDelegate, UITableViewDataSource>
-
+{
+    NSString *animationDirection;
+}
 @property (nonatomic, retain) id <NIDropDownDelegate> delegate;
-
+@property (nonatomic, retain) NSString *animationDirection;
 -(void)hideDropDown:(UIButton *)b;
-- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr;
+- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSString *)direction;
 @end
