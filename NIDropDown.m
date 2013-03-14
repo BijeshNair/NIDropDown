@@ -25,7 +25,7 @@
 - (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSString *)direction {
     btnSender = b;
     animationDirection = direction;
-    self = [super init];
+//    self = [super init];
     if (self) {
         // Initialization code
         CGRect btn = b.frame;
@@ -100,7 +100,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.textLabel.font = [UIFont systemFontOfSize:15];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
@@ -125,10 +125,10 @@
     [self.delegate niDropDownDelegateMethod:self];   
 }
 
--(void)dealloc {
-    [super dealloc];
-    [table release];
-    [self release];
-}
+//-(void)dealloc {
+//    [super dealloc];
+//    [table release];
+//    [self release];
+//}
 
 @end

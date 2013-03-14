@@ -36,7 +36,6 @@
 }
 
 - (void)viewDidUnload {
-    [btnSelect release];
     btnSelect = nil;
     [self setBtnSelect:nil];
     [super viewDidUnload];
@@ -46,10 +45,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)dealloc {
-    [btnSelect release];
-    [super dealloc];
-}
+//- (void)dealloc {
+//    [btnSelect release];
+//    [super dealloc];
+//}
 
 - (IBAction)selectClicked:(id)sender {
     NSArray * arr = [[NSArray alloc] init];
@@ -70,7 +69,7 @@
 }
 
 -(void)rel{
-    [dropDown release];
+//    [dropDown release];
     dropDown = nil;
 }
 
