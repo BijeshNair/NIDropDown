@@ -25,7 +25,7 @@
 - (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSString *)direction {
     btnSender = b;
     animationDirection = direction;
-//    self = [super init];
+    self = [super init];
     if (self) {
         // Initialization code
         CGRect btn = b.frame;
@@ -92,7 +92,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.list count];
-}   
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,7 +100,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         cell.textLabel.font = [UIFont systemFontOfSize:15];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
@@ -122,13 +122,13 @@
 }
 
 - (void) myDelegate {
-    [self.delegate niDropDownDelegateMethod:self];   
+    [self.delegate niDropDownDelegateMethod:self];
 }
 
-//-(void)dealloc {
-//    [super dealloc];
-//    [table release];
-//    [self release];
-//}
+-(void)dealloc {
+    [super dealloc];
+    [table release];
+    [self release];
+}
 
 @end
