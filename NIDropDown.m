@@ -13,16 +13,18 @@
 @property(nonatomic, strong) UITableView *table;
 @property(nonatomic, strong) UIButton *btnSender;
 @property(nonatomic, retain) NSArray *list;
+@property(nonatomic, retain) NSArray *imageList;
 @end
 
 @implementation NIDropDown
 @synthesize table;
 @synthesize btnSender;
 @synthesize list;
+@synthesize imageList;
 @synthesize delegate;
 @synthesize animationDirection;
 
-- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSString *)direction {
+- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSArray *)imgArr:(NSString *)direction {
     btnSender = b;
     animationDirection = direction;
     self = [super init];
@@ -30,7 +32,7 @@
         // Initialization code
         CGRect btn = b.frame;
         self.list = [NSArray arrayWithArray:arr];
-        
+        self.imageList = [NSArray arrayWithArray:imgArr];
         if ([direction isEqualToString:@"up"]) {
             self.frame = CGRectMake(btn.origin.x, btn.origin.y, btn.size.width, 0);
             self.layer.shadowOffset = CGSizeMake(-5, -5);
@@ -61,7 +63,6 @@
         }
         table.frame = CGRectMake(0, 0, btn.size.width, *height);
         [UIView commitAnimations];
-        
         [b.superview addSubview:self];
         [self addSubview:table];
     }
@@ -104,7 +105,21 @@
         cell.textLabel.font = [UIFont systemFontOfSize:15];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
-    cell.textLabel.text =[list objectAtIndex:indexPath.row];
+    if ([self.imageList count] == [self.list count]) {
+        cell.textLabel.text =[list objectAtIndex:indexPath.row];
+        cell.imageView.image = [imageList objectAtIndex:indexPath.row];
+    } else if ([self.imageList count] > [self.list count]) {
+        cell.textLabel.text =[list objectAtIndex:indexPath.row];
+        if (indexPath.row < [imageList count]) {
+            cell.imageView.image = [imageList objectAtIndex:indexPath.row];
+        }
+    } else if ([self.imageList count] < [self.list count]) {
+        cell.textLabel.text =[list objectAtIndex:indexPath.row];
+        if (indexPath.row < [imageList count]) {
+            cell.imageView.image = [imageList objectAtIndex:indexPath.row];
+        }
+    }
+    
     cell.textLabel.textColor = [UIColor whiteColor];
     
     UIView * v = [[UIView alloc] init];
@@ -116,8 +131,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self hideDropDown:btnSender];
+    
     UITableViewCell *c = [tableView cellForRowAtIndexPath:indexPath];
     [btnSender setTitle:c.textLabel.text forState:UIControlStateNormal];
+    
+    for (UIView *subview in btnSender.subviews) {
+        if ([subview isKindOfClass:[UIImageView class]]) {
+            [subview removeFromSuperview];
+        }
+    }
+    imgView.image = c.imageView.image;
+    imgView = [[UIImageView alloc] initWithImage:c.imageView.image];
+    imgView.frame = CGRectMake(5, 5, 25, 25);
+    [btnSender addSubview:imgView];
     [self myDelegate];
 }
 

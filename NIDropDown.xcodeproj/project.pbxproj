@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		193BFD8317201A5E00070D79 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 193BFD8117201A5E00070D79 /* apple.png */; };
+		193BFD8417201A5E00070D79 /* apple2.png in Resources */ = {isa = PBXBuildFile; fileRef = 193BFD8217201A5E00070D79 /* apple2.png */; };
+		193BFD8717201AFA00070D79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 193BFD8617201AFA00070D79 /* Default-568h@2x.png */; };
 		1945B517168D55D100C11EB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1945B516168D55D100C11EB2 /* UIKit.framework */; };
 		1945B519168D55D100C11EB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1945B518168D55D100C11EB2 /* Foundation.framework */; };
 		1945B51B168D55D100C11EB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1945B51A168D55D100C11EB2 /* CoreGraphics.framework */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		193BFD8117201A5E00070D79 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		193BFD8217201A5E00070D79 /* apple2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple2.png; sourceTree = "<group>"; };
+		193BFD8617201AFA00070D79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1945B512168D55D100C11EB2 /* NIDropDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIDropDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1945B516168D55D100C11EB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1945B518168D55D100C11EB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,7 @@
 		1945B507168D55D000C11EB2 = {
 			isa = PBXGroup;
 			children = (
+				193BFD8617201AFA00070D79 /* Default-568h@2x.png */,
 				1945B52D168D55ED00C11EB2 /* Classes */,
 				1945B51C168D55D100C11EB2 /* NIDropDown */,
 				1945B515168D55D100C11EB2 /* Frameworks */,
@@ -86,6 +93,8 @@
 				1945B535168D592A00C11EB2 /* NIViewController.h */,
 				1945B536168D592A00C11EB2 /* NIViewController.m */,
 				1945B537168D592A00C11EB2 /* NIViewController.xib */,
+				193BFD8117201A5E00070D79 /* apple.png */,
+				193BFD8217201A5E00070D79 /* apple2.png */,
 				1945B51D168D55D100C11EB2 /* Supporting Files */,
 			);
 			path = NIDropDown;
@@ -163,6 +172,9 @@
 			files = (
 				1945B521168D55D100C11EB2 /* InfoPlist.strings in Resources */,
 				1945B539168D592A00C11EB2 /* NIViewController.xib in Resources */,
+				193BFD8317201A5E00070D79 /* apple.png in Resources */,
+				193BFD8417201A5E00070D79 /* apple2.png in Resources */,
+				193BFD8717201AFA00070D79 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
