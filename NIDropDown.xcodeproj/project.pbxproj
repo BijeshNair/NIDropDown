@@ -256,6 +256,7 @@
 		1945B52B168D55D100C11EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NIDropDown/NIDropDown-Prefix.pch";
 				INFOPLIST_FILE = "NIDropDown/NIDropDown-Info.plist";
@@ -267,6 +268,7 @@
 		1945B52C168D55D100C11EB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NIDropDown/NIDropDown-Prefix.pch";
 				INFOPLIST_FILE = "NIDropDown/NIDropDown-Info.plist";

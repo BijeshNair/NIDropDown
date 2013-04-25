@@ -36,7 +36,7 @@
 }
 
 - (void)viewDidUnload {
-    [btnSelect release];
+//    [btnSelect release];
     btnSelect = nil;
     [self setBtnSelect:nil];
     [super viewDidUnload];
@@ -47,8 +47,8 @@
 }
 
 - (void)dealloc {
-    [btnSelect release];
-    [super dealloc];
+//    [btnSelect release];
+//    [super dealloc];
 }
 
 - (IBAction)selectClicked:(id)sender {
@@ -72,7 +72,7 @@
 }
 
 -(void)rel{
-    [dropDown release];
+//    [dropDown release];
     dropDown = nil;
 }
 

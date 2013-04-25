@@ -27,7 +27,7 @@
 - (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSArray *)imgArr:(NSString *)direction {
     btnSender = b;
     animationDirection = direction;
-    self = [super init];
+    self.table = (UITableView *)[super init];
     if (self) {
         // Initialization code
         CGRect btn = b.frame;
@@ -101,7 +101,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.textLabel.font = [UIFont systemFontOfSize:15];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
@@ -152,9 +152,9 @@
 }
 
 -(void)dealloc {
-    [super dealloc];
-    [table release];
-    [self release];
+//    [super dealloc];
+//    [table release];
+//    [self release];
 }
 
 @end
