@@ -24,7 +24,7 @@
 @synthesize delegate;
 @synthesize animationDirection;
 
-- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSArray *)imgArr:(NSString *)direction {
+- (id)showDropDown:(UIButton *)b :(CGFloat *)height :(NSArray *)arr :(NSArray *)imgArr :(NSString *)direction {
     btnSender = b;
     animationDirection = direction;
     self.table = (UITableView *)[super init];
@@ -120,7 +120,7 @@
         }
     }
     
-    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textColor = [UIColor blackColor];
     
     UIView * v = [[UIView alloc] init];
     v.backgroundColor = [UIColor grayColor];

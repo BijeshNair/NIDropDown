@@ -69,6 +69,7 @@
 
 - (void) niDropDownDelegateMethod: (NIDropDown *) sender {
     [self rel];
+    NSLog(@"%@", btnSelect.titleLabel.text);
 }
 
 -(void)rel{
