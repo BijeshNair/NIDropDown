@@ -15,8 +15,8 @@
 @interface NIDropDown ()
 @property(nonatomic, strong) UITableView *table;
 @property(nonatomic, strong) UIView *btnSender;
-@property(nonatomic, retain) NSArray *list;
-@property(nonatomic, retain) NSArray *imageList;
+@property(nonatomic, strong) NSArray *list;
+@property(nonatomic, strong) NSArray *imageList;
 @property(nonatomic, strong) UIViewController *dropDownViewController;
 @property(nonatomic, strong) UIButton *backgroundButton;
 @property(nonatomic) NSTextAlignment dropDownItemTextAlignment;
@@ -79,11 +79,12 @@
         table.frame = CGRectMake(0, 0, btn.size.width, *height);
         table.bounces = NO;
         [UIView commitAnimations];
-        [b.superview addSubview:self];
+        [viewController.view addSubview:self];
         _backgroundButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_BOUND.size.width, SCREEN_BOUND.size.height)];
-        [_backgroundButton setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
+        [_backgroundButton setBackgroundColor:[UIColor clearColor]];
         [_backgroundButton addTarget:self action:@selector(hideDimView:) forControlEvents:UIControlEventTouchUpInside];
         [viewController.view addSubview:_backgroundButton];
+        [viewController.view sendSubviewToBack:_backgroundButton];
         
         [self addSubview:table];
     }

@@ -58,22 +58,23 @@
     arrImage = [NSArray arrayWithObjects:[UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], nil];
     if(dropDown == nil) {
         CGFloat f = 200;
-        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :arrImage :@"down"];
+        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :arrImage :@"down" withViewController:self];
+        [dropDown setDropDownSelectionColor:[UIColor grayColor]];
         dropDown.delegate = self;
     }
     else {
         [dropDown hideDropDown:sender];
-        [self rel];
+//        [self rel];
     }
 }
 
-- (void) niDropDownDelegateMethod: (NIDropDown *) sender {
-    [self rel];
+- (void) niDropDownDelegateMethod:(UIView *)sender withTitle:(NSString *)title {
+//    [self rel];
     NSLog(@"%@", btnSelect.titleLabel.text);
+    [btnSelect setTitle:title forState:UIControlStateNormal];
 }
 
--(void)rel{
-//    [dropDown release];
+- (void)niDropDownHidden{
     dropDown = nil;
 }
 
