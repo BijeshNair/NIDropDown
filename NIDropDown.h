@@ -11,6 +11,8 @@
 @class NIDropDown;
 @protocol NIDropDownDelegate
 - (void) niDropDownDelegateMethod: (NIDropDown *) sender;
+- (void) niDropDownDelegateMethod: (UIView *) sender withTitle:(NSString *)title;
+- (void) niDropDownHidden;
 @end
 
 @interface NIDropDown : UIView <UITableViewDelegate, UITableViewDataSource>
@@ -20,6 +22,14 @@
 }
 @property (nonatomic, retain) id <NIDropDownDelegate> delegate;
 @property (nonatomic, retain) NSString *animationDirection;
--(void)hideDropDown:(UIButton *)b;
-- (id)showDropDown:(UIButton *)b :(CGFloat *)height :(NSArray *)arr :(NSArray *)imgArr :(NSString *)direction;
+-(void)hideDropDown:(UIView *)b;
+- (id)showDropDown:(UIView *)b :(CGFloat *)height :(NSArray *)arr :(NSArray *)imgArr :(NSString *)direction withViewController:(UIViewController *)viewController;
+-(void) setDropDownItemTextAlignment:(NSTextAlignment)alignment;
+-(void) setDropDownItemBackgroundColor:(UIColor *)color;
+-(void) setDropDownItemTextColor:(UIColor *)color;
+-(void) setDropDownSelectionTextColor:(UIColor *)color;
+-(void) setDropDownSelectionColor:(UIColor *)color;
+-(void) setDropDownSeparatorColor:(UIColor *)color;
+-(void) setDropDownTableBgColor:(UIColor *)color;
+-(void) setDimViewColor:(UIColor *)color withAlpha:(CGFloat)alpha;
 @end
