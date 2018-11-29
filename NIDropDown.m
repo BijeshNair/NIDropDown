@@ -38,7 +38,7 @@
 @synthesize delegate;
 @synthesize animationDirection;
 
-- (id)showDropDown:(UIView *)b :(CGFloat *)height :(NSArray *)arr :(NSArray *)imgArr :(NSString *)direction withViewController:(UIViewController *)viewController {
+- (id)showDropDown:(UIView *)b theHeight:(CGFloat *)height theArr:(NSArray *)arr theImgArr:(NSArray *)imgArr theDirection:(NSString *)direction withViewController:(UIViewController *)viewController {
     btnSender = b;
     _dropDownItemTextAlignment = DEFAULT_ALIGNMENT;
     animationDirection = direction;

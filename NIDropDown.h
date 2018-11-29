@@ -23,7 +23,7 @@
 @property (nonatomic, weak) id <NIDropDownDelegate> delegate;
 @property (nonatomic, retain) NSString *animationDirection;
 -(void)hideDropDown:(UIView *)b;
-- (id)showDropDown:(UIView *)b :(CGFloat *)height :(NSArray *)arr :(NSArray *)imgArr :(NSString *)direction withViewController:(UIViewController *)viewController;
+- (id)showDropDown:(UIView *)b theHeight:(CGFloat *)height theArr:(NSArray *)arr theImgArr:(NSArray *)imgArr theDirection:(NSString *)direction withViewController:(UIViewController *)viewController;
 -(void) setDropDownItemTextAlignment:(NSTextAlignment)alignment;
 -(void) setDropDownItemBackgroundColor:(UIColor *)color;
 -(void) setDropDownItemTextColor:(UIColor *)color;

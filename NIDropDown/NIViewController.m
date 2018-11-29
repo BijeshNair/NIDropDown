@@ -58,7 +58,7 @@
     arrImage = [NSArray arrayWithObjects:[UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], [UIImage imageNamed:@"apple.png"], [UIImage imageNamed:@"apple2.png"], nil];
     if(dropDown == nil) {
         CGFloat f = 200;
-        dropDown = [[NIDropDown alloc]showDropDown:sender :&f :arr :arrImage :@"down" withViewController:self];
+        dropDown = [[NIDropDown alloc]showDropDown:sender theHeight:&f theArr:arr theImgArr:arrImage theDirection:@"down" withViewController:self];
         [dropDown setDropDownSelectionColor:[UIColor grayColor]];
         dropDown.delegate = self;
     }
