@@ -97,19 +97,18 @@
     CGRect originGlobal = [b convertRect:btn toView:nil];
     originGlobal.origin.x = 15;
     originGlobal.origin.y = originGlobal.origin.y + 46.5;
-//    dropDown.frame = originGlobal;
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5];
-//    if ([animationDirection isEqualToString:@"up"]) {
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 0);//CGRectMake(originGlobal.origin.x, originGlobal.origin.y, originGlobal.size.width, 0);
-//    }else if ([animationDirection isEqualToString:@"down"]) {
-//        self.frame = CGRectMake(originGlobal.origin.x, originGlobal.origin.y+originGlobal.size.height, originGlobal.size.width, 0);
-//    }
+    if ([animationDirection isEqualToString:@"up"]) {
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y+self.frame.size.height, self.frame.size.width, 0);
+    }else if ([animationDirection isEqualToString:@"down"]) {
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 0);
+    }
     table.frame = CGRectMake(0, 0, originGlobal.size.width, 0);
     [UIView commitAnimations];
     [_backgroundButton removeFromSuperview];
-    [self.delegate niDropDownHidden];
+    [self.delegate niDropDownHidden:self];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

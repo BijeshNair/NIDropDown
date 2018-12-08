@@ -12,7 +12,7 @@
 @interface NIViewController : UIViewController <NIDropDownDelegate>
 {
     IBOutlet UIButton *btnSelect;
-    NIDropDown *dropDown;
+    NIDropDown *dropDown1, *dropDown2, *dropDown3;
 }
 
 @property (retain, nonatomic) IBOutlet UIButton *btnSelect;

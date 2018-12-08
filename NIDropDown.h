@@ -12,7 +12,7 @@
 @protocol NIDropDownDelegate
 - (void) niDropDownDelegateMethod: (NIDropDown *) sender;
 - (void) niDropDownDelegateMethod: (UIView *) sender withTitle:(NSString *)title;
-- (void) niDropDownHidden;
+- (void) niDropDownHidden: (NIDropDown *)sender;
 @end
 
 @interface NIDropDown : UIView <UITableViewDelegate, UITableViewDataSource>
