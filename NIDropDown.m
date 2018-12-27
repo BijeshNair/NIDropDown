@@ -79,12 +79,12 @@
         table.frame = CGRectMake(0, 0, btn.size.width, *height);
         table.bounces = NO;
         [UIView commitAnimations];
-        [viewController.view addSubview:self];
+        [b.superview addSubview:self];
         _backgroundButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_BOUND.size.width, SCREEN_BOUND.size.height)];
         [_backgroundButton setBackgroundColor:[UIColor clearColor]];
         [_backgroundButton addTarget:self action:@selector(hideDimView:) forControlEvents:UIControlEventTouchUpInside];
-        [viewController.view addSubview:_backgroundButton];
-        [viewController.view sendSubviewToBack:_backgroundButton];
+        [b.superview addSubview:_backgroundButton];
+        [b.superview sendSubviewToBack:_backgroundButton];
         
         [self addSubview:table];
     }
